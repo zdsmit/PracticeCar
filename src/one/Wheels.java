@@ -1,6 +1,6 @@
 package one;
 
-public class Wheels {
+public class Wheels extends CarPart {
 	private int numberOfWheels;
 	
 	public void setWheels(int wheels) {

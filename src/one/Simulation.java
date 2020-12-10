@@ -5,7 +5,7 @@ public class Simulation {
 
 	public static void main(String[] args) {
 		
-		Car car = new Car(0, 0);
+		Car car = new Car(6, 4);
 		car.run();
 	}
 
