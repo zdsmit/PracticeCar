@@ -1,6 +1,6 @@
 package one;
 
-public class Wheels extends CarPart {
+public class Wheels extends CarPart implements Functional {
 	private int numberOfWheels;
 	
 	public void setWheels(int wheels) {

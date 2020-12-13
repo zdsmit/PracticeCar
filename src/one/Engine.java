@@ -1,6 +1,6 @@
 package one;
 
-public class Engine extends CarPart {
+public class Engine extends CarPart implements Functional {
 	private int cylinders;
 	
 	public void setCylinders(int cylinders) {

@@ -1,11 +1,12 @@
 package one;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Car {
 	
 	private Engine engine;
 	private Wheels wheels;
-	private ArrayList parts;
+	private ArrayList<Functional> parts = new ArrayList<Functional>();
 	
 	public Car(int cylinders, int numberOfWheels) { 
 		Engine engine = new Engine();
@@ -25,7 +26,13 @@ public class Car {
 		System.out.println("Starting up car now!");
 		Iterator itr = this.parts.iterator();
 		while (itr.hasNext()) {
-			System.out.println(itr.next());
+			if (itr.next() instanceof Engine) {
+				Engine engine = (Engine) itr.next();
+				engine.function();
+			} else if (itr.next() instanceof Wheels) {
+				Wheels wheels = (Wheels) itr.next();
+				wheels.function();
+			}
 		}
 	}
 }
