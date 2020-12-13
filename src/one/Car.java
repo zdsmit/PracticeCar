@@ -6,7 +6,7 @@ public class Car {
 	
 	private Engine engine;
 	private Wheels wheels;
-	private ArrayList<Functional> parts = new ArrayList<Functional>();
+	private ArrayList parts = new ArrayList();
 	
 	public Car(int cylinders, int numberOfWheels) { 
 		Engine engine = new Engine();
@@ -24,15 +24,16 @@ public class Car {
 	
 	public void run() {
 		System.out.println("Starting up car now!");
-		Iterator itr = this.parts.iterator();
-		while (itr.hasNext()) {
-			if (itr.next() instanceof Engine) {
-				Engine engine = (Engine) itr.next();
+		for (int i = 0; i < this.parts.size(); i++) {
+			if (i == 0) {
+				Engine engine = (Engine) this.parts.get(i);
 				engine.function();
-			} else if (itr.next() instanceof Wheels) {
-				Wheels wheels = (Wheels) itr.next();
+			} else if (i == 1) {
+				Wheels wheels = (Wheels) this.parts.get(i);
 				wheels.function();
 			}
 		}
 	}
 }
+
+
