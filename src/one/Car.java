@@ -20,7 +20,7 @@ public class Car {
 		
 		engine.setCylinders(cylinders);
 		wheels.setWheels(numberOfWheels);
-		steeringWheel.setPowerSteering();
+		steeringWheel.setPowerSteering(hasPowerSteering);
 		
 		this.parts.add(engine);
 		this.parts.add(wheels);

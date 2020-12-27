@@ -3,12 +3,8 @@ package one;
 public class SteeringWheel extends CarPart implements Functional {
 	private boolean hasPowerSteering;
 	
-	public void setPowerSteering() {
-		if (this.hasPowerSteering == true) {
-			this.hasPowerSteering = false;
-		} else if (this.hasPowerSteering == false) {
-			this.hasPowerSteering = true;
-		}
+	public void setPowerSteering(boolean powerSteering) {
+		this.hasPowerSteering = powerSteering;
 	}
 	
 	public void function() {
